@@ -1,0 +1,10 @@
+[Unit]
+Description=disable acpi XHC wakeup before suspending
+Before=sleep.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/disable-acpi-wakeup XHC
+
+[Install]
+WantedBy=sleep.target
